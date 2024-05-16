@@ -24,6 +24,7 @@ dependencies:
 - split
 - random
 - async
+- accelerate
 
 ghc-options:
 - -Wall

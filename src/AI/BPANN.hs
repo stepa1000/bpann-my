@@ -17,6 +17,7 @@ import Data.List
 import Data.List.Split
 import Data.Maybe
 import System.Random
+import Data.Array.Accelerate
 
 -- ** Types for computation
 type ALayer a = [(Neuron,a)] -- Das erste Neuron ist immer das BIAS Neuron
@@ -37,7 +38,7 @@ data ForwardPassInfo = FPInfo {
 -- |inputs
 -----------------------------------------------------------
   xs :: [Double] -- Ungewichtete Eingaben
-} deriving Show
+} deriving (Show, Generic, Elt)
 
 -- |the neuron
 -----------------------------------------------------------
@@ -51,7 +52,7 @@ data Neuron = Neuron {
 -- |first derivation of the activation function
 -----------------------------------------------------------
   fun' :: (Double -> Double) -- 1. Ableitung der Aktivierungsfunktion
-}
+} deriving (Generic, Elt)
 
 instance Show Neuron where
   show (Neuron ws _ _) = 

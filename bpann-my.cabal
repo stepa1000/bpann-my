@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       AI.BPANN
+      AI.BPANN.Accelerate
       AI.BPANN.Async
       Lib
   other-modules:
@@ -36,7 +37,8 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      async
+      accelerate
+    , async
     , base >=4.7 && <5
     , random
     , split
@@ -52,7 +54,8 @@ executable bpann-my-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      async
+      accelerate
+    , async
     , base >=4.7 && <5
     , bpann-my
     , random
@@ -70,7 +73,8 @@ test-suite bpann-my-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      async
+      accelerate
+    , async
     , base >=4.7 && <5
     , bpann-my
     , random
