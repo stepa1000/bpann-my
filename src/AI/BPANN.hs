@@ -11,13 +11,16 @@
 -- Basic backpropagation neuronal network
 -- inspired by hnn
 
+{-# LANGUAGE DeriveGeneric, DeriveAnyClass #-}
+
 module AI.BPANN where
 
 import Data.List
 import Data.List.Split
 import Data.Maybe
 import System.Random
-import Data.Array.Accelerate
+import Data.Array.Accelerate (Elt)
+import GHC.Generics
 
 -- ** Types for computation
 type ALayer a = [(Neuron,a)] -- Das erste Neuron ist immer das BIAS Neuron

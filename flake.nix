@@ -1,4 +1,4 @@
-:{
+{
   description = "my project description";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
@@ -18,7 +18,7 @@
           hPkgs.ormolu # Haskell formatter
           hPkgs.hlint # Haskell codestyle checker
           hPkgs.hoogle # Lookup Haskell documentation
-          hPkgs.haskell-language-server # LSP server for editor
+          #hPkgs.haskell-language-server # LSP server for editor
           hPkgs.implicit-hie # auto generate LSP hie.yaml file from cabal
           hPkgs.retrie # Haskell refactoring tool
           # hPkgs.cabal-install
